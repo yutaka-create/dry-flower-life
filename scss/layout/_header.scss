@@ -1,0 +1,44 @@
+/* ===== layout / _header.scss ===== */
+
+@use "../foundation/mixin" as m;
+
+.l-header {
+  padding-top: 35px;
+  padding-bottom: 35.29px;
+
+  @include m.mq-sp {
+    padding-top: 25px;
+    padding-bottom: 24.76px;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    width: 190px;
+
+    @include m.mq-sp {
+      width: 120px;
+    }
+  }
+
+  &__logo-link {
+    display: block;
+  }
+
+  &__nav-list {
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+
+    @include m.mq-sp {
+      // 390pxで40px、320pxで20pxになるように余白を可変にする
+      column-gap: clamp(20px,
+          calc(28.5714vw - 71.4286px),
+          40px);
+    }
+  }
+}

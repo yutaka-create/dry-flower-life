@@ -1,0 +1,38 @@
+/* ===== foundation / _base.scss ===== */
+
+@use "function" as f;
+@use "vars" as v;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  font-family: v.$font-family-base;
+  font-size: f.rem(v.$font-size-base);
+  font-weight: v.$font-weight-regular;
+  color: v.$color-text;
+  background-color: v.$color-bg;
+  overflow-wrap: break-word;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+picture {
+  display: block;
+}
+
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}

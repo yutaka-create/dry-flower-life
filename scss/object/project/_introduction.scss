@@ -1,0 +1,38 @@
+/* ===== object / project / _introduction.scss ===== */
+
+@use "../../foundation/function" as f;
+@use "../../foundation/mixin" as m;
+
+.p-introduction {
+  margin-bottom: 80px;
+  text-align: center;
+
+  @include m.mq-sp {
+    margin-bottom: 50px;
+  }
+
+  &__catchphrase {
+    font-size: f.rem(18px);
+    font-weight: bold;
+    margin-bottom: 40px;
+
+    @include m.mq-sp {
+      font-size: f.rem(16px);
+    }
+  }
+
+  &__text {
+    @include m.mq-sp {
+      text-align: left;
+    }
+  }
+
+  &__br {
+    display: inline;
+
+    // 806px以下では文章が不自然に折り返されるため、強制改行を解除
+    @media screen and (max-width: 806px) {
+      display: none;
+    }
+  }
+}

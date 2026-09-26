@@ -1,0 +1,50 @@
+/* ===== object / project / _works.scss ===== */
+
+@use "../../foundation/vars" as v;
+@use "../../foundation/mixin" as m;
+
+.p-works {
+  margin-bottom: v.$space-section-pc;
+
+  @include m.mq-sp {
+    margin-bottom: v.$space-section-sp;
+  }
+
+  &__heading {
+    margin-bottom: 40px;
+
+    @include m.mq-sp {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 19px 19.5px;
+
+    @include m.mq-sp {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+
+  &__picture {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 307 / 246;
+    overflow: hidden;
+
+    @include m.mq-sp {
+      aspect-ratio: 350 / 280;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

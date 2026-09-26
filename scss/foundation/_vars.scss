@@ -1,0 +1,51 @@
+/* ===== foundation / _vars.scss ===== */
+
+// ==============================
+// Color
+// ==============================
+
+$color-text: #707070;
+$color-bg: #fff;
+
+// ==============================
+// Font Family
+// ==============================
+
+$font-family-base: "Meiryo", sans-serif;
+
+// ==============================
+// Font Size
+// ==============================
+
+$font-size-base: 14px;
+
+$font-size-heading-en-pc: 40px;
+$font-size-heading-en-sp: 32px;
+$font-size-heading-ja: 14px;
+
+// ==============================
+// Font Weight
+// ==============================
+
+$font-weight-regular: 400;
+
+// ==============================
+// Spacing
+// ==============================
+
+$space-section-pc: 120px;
+$space-section-sp: 60px;
+
+// ==============================
+// Layout
+// ==============================
+
+$layout-width: 1000px;
+$layout-gutter: 20px;
+
+// ==============================
+// Breakpoint
+// ==============================
+
+// PC表示の開始幅
+$breakpoint-pc-min: 768px;

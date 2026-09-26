@@ -1,0 +1,24 @@
+/* ===== object / component / _section-heading.scss ===== */
+@use "../../foundation/function" as f;
+@use "../../foundation/vars" as v;
+@use "../../foundation/mixin" as m;
+
+.c-section-heading {
+
+  &__en,
+  &__ja {
+    display: block;
+  }
+
+  &__en {
+    font-size: f.rem(v.$font-size-heading-en-pc);
+
+    @include m.mq-sp {
+      font-size: f.rem(v.$font-size-heading-en-sp);
+    }
+  }
+
+  &__ja {
+    font-size: f.rem(v.$font-size-heading-ja);
+  }
+}
